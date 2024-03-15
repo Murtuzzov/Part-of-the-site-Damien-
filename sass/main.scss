@@ -1,0 +1,36 @@
+@import "./components/reviews";
+@import "./components/contact";
+@import "./base/normalizer";
+@import "./base/fonts";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$custom-themes: (
+  "primaryPurple": #4a2ced,
+  "primaryYellow": #ffce22,
+  "supdarkGray": #1c1c21,
+  "darkGray": #62646c,
+  "primaryGray": #797c86,
+  "mainBg": #070708,
+  "green": green,
+  "fontcolor": #2e363e,
+);
+
+$theme-colors: map-merge(
+  $map1: $custom-themes,
+  $map2: $theme-colors,
+);
+
+$spacers: map-merge(
+  $map1: (
+    6: (
+      $spacer * 4,
+    ),
+    7: (
+      $spacer * 5,
+    ),
+  ),
+  $map2: $spacers,
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
